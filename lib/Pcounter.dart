@@ -41,17 +41,20 @@ class _CounterPageState extends State<CounterPage> {
     nowInvest += 1000;
     totalInvest = nowInvest;
     setState(() {});
-  }void add_500() {
+  }
+  void add_500() {
     counter_500++;
     nowInvest += 500;
     totalInvest = nowInvest;
     setState(() {});
-  }void add_200() {
+  }
+  void add_200() {
     counter_200++;
     nowInvest += 200;
     totalInvest = nowInvest;
     setState(() {});
-  }Future<void> baseCount() async {
+  }
+  Future<void> baseCount() async {
     baseRate = totalRotate / (totalInvest/1000);
     baseRate = ((baseRate*10).round()) / 10;
     if (totalInvest <= 0 || totalRotate <= 0){
@@ -85,10 +88,8 @@ class _CounterPageState extends State<CounterPage> {
         appBar: AppBar(
           title: const Text('Pボーダーカウンター'),
         ),
-//        resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Column(//縦に並べたい
-//            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const SizedBox(height: 20),
               Row(
@@ -208,7 +209,6 @@ class _CounterPageState extends State<CounterPage> {
                 children: [
                   FloatingActionButton(
                     onPressed: () {
-                      // selectHand('✊');
                       add_1000();
                       calc(startGames, endGames);
                       baseCount();
@@ -217,12 +217,10 @@ class _CounterPageState extends State<CounterPage> {
                   ),
                   FloatingActionButton(
                     onPressed: () {
-                      // selectHand('✌');
                       add_500();
                       calc(startGames, endGames);
                       baseCount();
                     },
-                    // child: Text('✌'),
                     child: Text('$counter_500'),
                   ),
                   FloatingActionButton(
@@ -231,7 +229,6 @@ class _CounterPageState extends State<CounterPage> {
                       calc(startGames, endGames);
                       baseCount();
                     },
-                    // child: Text('✋'),
                     child: Text('$counter_200'),
                   ),
                 ],
