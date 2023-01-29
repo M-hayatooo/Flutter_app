@@ -29,4 +29,4 @@ A Flutter Pachinko border counter app.
 
 ##  動作環境
 
-
+  sdk: '>=2.18.1 <3.0.0'
