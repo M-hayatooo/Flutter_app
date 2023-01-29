@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter app',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -57,7 +57,7 @@ class _CounterPageState extends State<CounterPage> {
   Future<void> baseCount() async {
     baseRate = totalRotate / (totalInvest/1000);
     baseRate = ((baseRate*10).round()) / 10;
-    if (totalInvest <= 0 || totalRotate <= 0){
+    if (totalInvest <= 0 || totalRotate <= 0||nowInvest <= 0){
       baseRate = 0.0;
     }
     setState(() {});
@@ -68,9 +68,9 @@ class _CounterPageState extends State<CounterPage> {
     counter_200 = 0;
     totalInvest = 0;
     nowInvest = 0;
-    endGames = 0;
-    startGames = 0;
-    totalRotate = 0;
+    //endGames = 0;
+    //startGames = 0;
+    //totalRotate = 0;
     baseRate = 0.0;
     setState(() {});
   }
